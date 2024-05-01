@@ -24,7 +24,7 @@ func main() {
 	// length; if we know the slice is going to grow ahead
 	// of time, it's possible to pass a capacity explicitly
 	// as an additional parameter to `make`.
-	s = make([]string, 3)
+	s = make([]string, 3, 5)
 	fmt.Println("emp:", s, "len:", len(s), "cap:", cap(s))
 
 	// We can set and get just like with arrays.
