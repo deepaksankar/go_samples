@@ -97,4 +97,13 @@ func main() {
 	// particular function, create and test a new one.
 	newInts := intSeq()
 	fmt.Println(newInts())
+
+	var fib func(n int) int
+
+	fib = func(n int) int {
+		if (n < 2) {
+			return n
+		}
+		return fib(n-1) + fib(n-2)
+	}
 }
