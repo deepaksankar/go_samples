@@ -23,6 +23,12 @@ func plusPlus(a, b, c int) int {
 	return a + b + c
 }
 
+// The `(int, int)` in this function signature shows that
+// the function returns 2 `int`s.
+func vals() (int, int) {
+	return 3, 9
+}
+
 func main() {
 
 	// Call a function just as you'd expect, with
@@ -32,4 +38,16 @@ func main() {
 
 	res = plusPlus(1, 2, 3)
 	fmt.Println("1+2+3 =", res)
+
+	// Here we use the 2 different return values from the
+	// call with _multiple assignment_.
+	a, b := vals()
+	fmt.Println(a)
+	fmt.Println(b)
+
+	// If you only want a subset of the returned values,
+	// use the blank identifier `_`.
+	_, c := vals()
+	// fmt.Println(_) ; does not work
+	fmt.Println(c)
 }
