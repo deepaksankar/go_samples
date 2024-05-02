@@ -52,6 +52,13 @@ func intSeq() func() int {
 	}
 }
 
+func fact(n int) int {
+	if n == 0 {
+		return 1
+	}
+	return n * fact(n-1)
+}
+
 func main() {
 
 	// Call a function just as you'd expect, with
